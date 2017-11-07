@@ -1,7 +1,6 @@
 {
-  "name": "app",
-  "version": "0.1.0",
-  "private": true,
+  "name": "login-template-react",
+  "version": "1.0.0",
   "dependencies": {
     "axios": "^0.17.0",
     "classnames": "^2.2.5",
@@ -19,5 +18,41 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "jshintConfig": {
+    "mocha": true,
+    "esversion": 6,
+    "globals": {
+      "require": false,
+      "console": false,
+      "module": false,
+      "Buffer": false,
+      "describe": false,
+      "it": false,
+      "before": false,
+      "beforeEach": false,
+      "after": false,
+      "afterEach": false,
+      "exist": false
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camiloperezv/login-template-react.git"
+  },
+  "keywords": [
+    "jwt",
+    "jsonwebtoken",
+    "node",
+    "react",
+    "authentication",
+    "signup",
+    "template"
+  ],
+  "author": "camiloperezv",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/camiloperezv/login-template-react/issues"
+  },
+  "homepage": "https://github.com/camiloperezv/login-template-react#readme"
 }

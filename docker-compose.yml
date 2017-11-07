@@ -1,0 +1,20 @@
+version: '3'
+services:
+  web:
+    build: .
+    command: npm start
+    ports:
+     - "3100:3000"
+    tty: true
+    volumes:
+     - .:/app
+     - nodeModReact:/app/node_modules
+    networks:
+     - templateNetwork
+
+volumes:
+  nodeModReact:
+
+networks:
+  templateNetwork:
+    driver: bridge
