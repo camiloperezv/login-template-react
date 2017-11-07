@@ -1,17 +1,17 @@
 import React from 'react'
+import Login from './components/Login/login';
+import NotFound from './components/NotFound/not-found'
+import SignUp from './components/SignUp/sign-up';
+import Home from './components/Home/home';
+import SignOut from './components/SignOut/sign-out';
+import Auth from './helpers/auth';
 import {
   BrowserRouter as Router,
   Route,
   Redirect,
   Switch
 } from 'react-router-dom'
-import Login from '../Login';
-import NotFound from '../NotFound'
-import SignUp from '../SignUp';
-import Home from '../Home';
-import SignOut from '../SignOut';
-import Auth from '../../helpers/auth';
-const App = () => (
+const Routes = () => (
   <Router>
     <Switch>
       <PublicRoute path="/" exact component={Login} />
@@ -22,13 +22,16 @@ const App = () => (
     </Switch>
   </Router>
 )
+
+export default Routes
+
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route {...rest} render={props => (
     Auth.isAuthenticated ? (
       <Component {...props} />
     ) : (
         <Redirect to={{
-          pathname: '/login'
+          pathname: '/'
         }} />
       )
   )} />
@@ -44,4 +47,4 @@ const PublicRoute = ({ component: Component, ...rest }) => (
       )
   )} />
 )
-export default App
+
